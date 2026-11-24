@@ -1,0 +1,29 @@
+# Local AI tools
+.agents/
+.claude/
+.codex/
+.opencode/
+.cursor/
+.gemini/
+.windsurf/
+.continue/
+.cline/
+.roo/
+.copilot/
+.amazonq/
+.qodo/
+.aider.chat.history.md
+.aider.input.history
+.aider.tags.cache.v*/
+
+# Editor settings and temporary files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS metadata
+.DS_Store
+Thumbs.db
+Desktop.ini

@@ -1,0 +1,27 @@
+{
+  "seed": 410042,
+  "runs": [
+    {
+      "layout": "revised",
+      "outcome": "unresolved",
+      "minimum_sampled_clearance_m": -0.0005049242337536669,
+      "closest_sample_time_s": 3.58,
+      "closest_sample_geom": "pillow_racket_rim_12",
+      "protected_contacts": 1,
+      "inter_arm_contacts": 0,
+      "first_physical_violation_time_s": 3.59
+    },
+    {
+      "layout": "clearance",
+      "outcome": "arm_capture",
+      "minimum_sampled_clearance_m": 0.06670708739143143,
+      "closest_sample_time_s": 0.93,
+      "closest_sample_geom": "pillow_racket_rim_17",
+      "protected_contacts": 0,
+      "inter_arm_contacts": 0,
+      "first_physical_violation_time_s": null,
+      "capture_tick": 293,
+      "capture_time_s": 2.93
+    }
+  ]
+}
