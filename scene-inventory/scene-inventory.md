@@ -4,6 +4,14 @@ D07 · 장면 구성표 · 작성 gm(초안 보조 Codex) · 검토 gm 예정 ·
 
 ## 침실 장면 둘러보기
 
+[D07 v0.5 제출본, 장면 XML과 스크린샷](../docs/scene.md)
+
+[실험 뷰어에서 네 팔 침실 장면 열기](https://mosquito-swatter-robolab.github.io/experiment-viewer/?experiment=bedroom-four-arm-410042)
+
+이전 두 팔 비교 영상과 시드 410080의 새 재현 영상도 뷰어에 있다. 두 팔 재현에서 로봇 조건은 500틱 미결, 중간 세기 포충등 조건은 262틱 진입이었다. [두 팔 비교 재현](https://mosquito-swatter-robolab.github.io/experiment-viewer/?experiment=bedroom-two-arm-410080-replay-v2) · [이전 영상 아카이브](https://mosquito-swatter-robolab.github.io/experiment-viewer/?experiment=bedroom-robot-vs-lure-410080)
+
+네 팔 비교의 복원 시드는 `410042`다. `clearance` 배치로 다시 실행해 네 팔의 포획 293틱(2.93초), 중간 세기 포충등의 최초 진입 350틱(3.50초)을 확인했다. 조감도·탑뷰·측면도·접촉 확대는 이 실행 기록을 사용한다. 붉은 테두리는 기존 보호 상자와 같은 위치·크기의 로봇 팔 진입 금지구역이다. 영상의 사람 형상은 촬영용이며 충돌 판정에는 아래 표의 타원체가 사용된다.
+
 가운데 침대에 사람 모형이 누워 있고 주변에는 채를 든 팔 네 대가 있다. 카메라 두 대가 모기를 관찰한다. 장치가 없는 침실과 포충등을 켠 침실도 같은 시작 조건으로 비교한다. 표에 나오는 보호 구역은 모기가 사람 곁까지 왔는지 세는 가상의 공간이다.
 
 이 문서에서 시드는 시험의 시작 조건을 다시 만드는 번호이고, 한 틱은 가상 시간 0.01초다.

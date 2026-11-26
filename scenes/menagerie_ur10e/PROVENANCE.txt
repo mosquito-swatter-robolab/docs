@@ -1,0 +1,6 @@
+Upstream project: https://github.com/google-deepmind/mujoco_menagerie
+Pinned revision: 370c43965323c0944b433b202aac5058b5f907a9
+Source directory: universal_robots_ur10e
+Imported model: ur10e.xml and referenced files under assets/
+License: BSD-3-Clause, reproduced in LICENSE
+The upstream MJCF and mesh files are unmodified. Bedroom mounts, pedestals, tools, lights, cameras, and surrounding scene are added in swatter.sim.bedroom_demo.

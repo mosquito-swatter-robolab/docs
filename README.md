@@ -15,7 +15,7 @@
 | 2 | [D01 문제 정의서 v0.6](problem-statement/problem-statement.md) | [양식](problem-statement/template.md) | `docs/problem.md` |
 | 3 | [D03 요구사항 명세 v0.7](requirements/requirements.md) | [양식](requirements/template.md) | `docs/requirements.md`, `tests/test_judge.py`, `src/judge.py` |
 | 4 | [D06 시스템 구조 v0.3](architecture/architecture.md) | [양식](architecture/template.md) | `docs/architecture.md` |
-| 4 | [D07 장면 구성표 v0.4](scene-inventory/scene-inventory.md) | [양식](scene-inventory/template.md) | `docs/scene.md`, `scenes/*.xml`, 장면 스크린샷, 확인 코드 출력 |
+| 4 | [D07 장면 구성표 v0.5](docs/scene.md) | [양식](scene-inventory/template.md) | [장면 XML](scenes/bedroom-v0.xml), [스크린샷](scenes/bedroom-v0.png), [확인 출력](scenes/bedroom-v0-check.json) |
 | 4 | [D08 안전 개념 v0.3](safety-concept/safety-concept.md) | [양식](safety-concept/template.md) | `docs/architecture.md`에 D06과 함께 제출 |
 | 5 | [D04 테스트 시나리오·추적표 v0.5](test-plan/test-plan.md) | [양식](test-plan/template.md) | 3일차 추적표 예시 참고 |
 | 5 | [D05 일정·위험 목록 v0.4](schedule-risks/schedule-risks.md) | [양식](schedule-risks/template.md) | 1일차 산출물 목록 참고 |

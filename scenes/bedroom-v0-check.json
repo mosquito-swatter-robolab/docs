@@ -1,0 +1,26 @@
+﻿{
+  "counts": {
+    "nq": 24,
+    "nv": 24,
+    "nu": 24,
+    "ncam": 2,
+    "nmocap": 1,
+    "ngeom": 744,
+    "nmesh": 80,
+    "nbody": 38
+  },
+  "mesh_files": 20,
+  "contacts": 0,
+  "target_mass_kg": 1.4137166941154069e-05,
+  "protected_half_size_m": [
+    0.58,
+    0.93,
+    0.45
+  ],
+  "racket_size_m": [
+    0.09,
+    0.001,
+    0.0
+  ],
+  "timestep_s": 0.01
+}
