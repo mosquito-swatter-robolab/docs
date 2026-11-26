@@ -1,12 +1,12 @@
 # D07 장면 구성표 | 야간 침실 모기 요격 시뮬레이션
 
-D07 · 장면 구성표 · 작성 gm(초안 보조 Codex) · 검토 gm 예정 · 상태 초안 · 버전 v0.4 · 개정일 2026-11-25 · 관련 [D02](../charter/charter.md), [D03](../requirements/requirements.md), [D06](../architecture/architecture.md) · R-01, R-02, R-04~R-07 · T-01~T-06
+D07 · 장면 구성표 · 작성 gm(초안 보조 Codex) · 검토 gm 예정 · 제출본 v0.5 · 개정일 2026-11-26 · 관련 [D02](../charter/charter.md), [D03](../requirements/requirements.md), [D06](../architecture/architecture.md) · R-01, R-02, R-04~R-07 · T-01~T-06
 
 ## 침실 장면 둘러보기
 
-[D07 v0.5 제출본, 장면 XML과 스크린샷](../docs/scene.md)
-
-[실험 뷰어에서 네 팔 침실 장면 열기](https://mosquito-swatter-robolab.github.io/experiment-viewer/?experiment=bedroom-four-arm-410042)
+- [네 팔 침실 장면 XML](../scenes/bedroom-v0.xml)과 [UR10e 메시 폴더](../scenes/menagerie_ur10e)를 함께 둔다. MuJoCo 4.0.1에서 XML을 열고 `bedroom_home` 키프레임을 적용하면 실험 초기 관절 자세를 볼 수 있다. XML은 초기 배치를 재현하며, 시드별 실험에는 표적·센서·제어 코드가 사용된다.
+- [초기 장면 스크린샷](../scenes/bedroom-v0.png)은 시드 410042의 0틱이다. [XML 확인 출력](../scenes/bedroom-v0-check.json)에는 자유도, 액추에이터, 카메라, 표적, 초기 접촉 수와 기하 치수를 기록했다.
+- 조감도·탑뷰·측면도·접촉 확대를 같은 재생 시점에서 볼 수 있다. [GitHub Pages에서 네 팔 침실 장면 재생](https://mosquito-swatter-robolab.github.io/experiment-viewer/?experiment=bedroom-four-arm-410042)
 
 이전 두 팔 비교 영상과 시드 410080의 새 재현 영상도 뷰어에 있다. 두 팔 재현에서 로봇 조건은 500틱 미결, 중간 세기 포충등 조건은 262틱 진입이었다. [두 팔 비교 재현](https://mosquito-swatter-robolab.github.io/experiment-viewer/?experiment=bedroom-two-arm-410080-replay-v2) · [이전 영상 아카이브](https://mosquito-swatter-robolab.github.io/experiment-viewer/?experiment=bedroom-robot-vs-lure-410080)
 
@@ -16,7 +16,7 @@ D07 · 장면 구성표 · 작성 gm(초안 보조 Codex) · 검토 gm 예정 ·
 
 이 문서에서 시드는 시험의 시작 조건을 다시 만드는 번호이고, 한 틱은 가상 시간 0.01초다.
 
-- 가상 물체의 모양과 관절을 정의하는 파일 형식을 MJCF라고 한다. 장면 v0의 기본 MJCF는 MuJoCo Menagerie의 `ur10e.xml`이다. 침실 장면은 `bedroom_demo.py`의 `build_bedroom_scene(arm_count=4, pillow_layout="clearance")`가 기본 팔 MJCF를 네 번 붙여 런타임에 만든다.
+- 가상 물체의 모양과 관절을 정의하는 파일 형식을 MJCF라고 한다. 장면 v0의 기본 MJCF는 MuJoCo Menagerie의 `ur10e.xml`이다. `bedroom_demo.py`의 `build_bedroom_scene(arm_count=4, pillow_layout="clearance", west_layout="original")`로 기본 팔 MJCF를 네 번 붙인 장면을 만들고, 같은 구성을 제출용 XML로 내보냈다.
 - 플랫폼과 모델은 MuJoCo Menagerie UR10e를 사용한다. 침대, 사람 모형, 보호 상자, 모기채, 표적은 장면 생성 코드에서 구성한다.
 - 기준 좌표는 바닥 중앙이 원점인 월드 좌표다. +x는 오른쪽, +y는 발치, +z는 위다. 위치와 길이는 m, 관절 각은 rad를 사용한다.
 
@@ -50,7 +50,7 @@ D07 · 장면 구성표 · 작성 gm(초안 보조 Codex) · 검토 gm 예정 ·
 | 작업 물체 및 고정물 개수 | 표적 1개, 팔·망 각 4개, 바닥·침대·베개·사람 모형·보호 상자 각 1개 | 모델 개수와 기하 이름 확인. `nmocap=1`, 네 팔마다 망 기하 1개 |
 | 작업 물체 개별·합계 질량 | 표적 1개의 컴파일된 질량 확인 | 개별·합계 모두 약 1.414×10⁻⁵ kg. 궤적은 mocap으로 부여한다. |
 | 기하 크기 | 망 반지름 0.09 m·두께 0.002 m, 보호 상자 전체 1.16 × 1.86 × 0.90 m | 네 망 모두 원기둥 크기 [0.09, 0.001, 0] m. 보호 상자 반치수 [0.58, 0.93, 0.45] m 확인 |
-| 초기 배치 | 의도하지 않은 초기 접촉 0건 | `mj_forward()` 직후 `data.ncon=0`, 팔 베이스와 모기 기본 위치 확인. 네 팔 장면 GUI 캡처는 제출 준비 단계에서 확인한다. |
+| 초기 배치 | 의도하지 않은 초기 접촉 0건 | 제출용 XML을 열고 `bedroom_home` 적용 후 `mj_forward()`에서 `data.ncon=0`을 확인했다. [스크린샷](../scenes/bedroom-v0.png) · [확인 출력](../scenes/bedroom-v0-check.json) |
 
 ### 장면 XML 구현 요청문
 

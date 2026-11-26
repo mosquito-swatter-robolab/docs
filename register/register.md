@@ -13,9 +13,9 @@
 | 2 | D01 | 문제 정의서 | Problem Statement | 01 | gm · PM | gm 예정 | 초안 · 검토 대기 | v0.6 | D02, D03 | [문제 정의서](../problem-statement/problem-statement.md) |
 | 3 | D03 | 요구사항 명세 | PRD / SRS | 02 | gm · PM | gm 예정 | 초안 · 검토 대기 | v0.7 | R-01~R-10 | [요구사항 명세](../requirements/requirements.md) |
 | 4 | D06 | 시스템 구조·인터페이스 | System Architecture / ICD | 03 | gm · 설계 | gm 예정 | 초안 · 검토 대기 | v0.3 | R-01~R-07 | [시스템 구조](../architecture/architecture.md) |
-| 4 | D07 | 장면 구성표 | BOM 대응 | 03 | gm · 시뮬레이션 | gm 예정 | 초안 · 검토 대기 | v0.4 | R-01, R-02, R-04~R-07 | [장면 구성표](../scene-inventory/scene-inventory.md) |
+| 4 | D07 | 장면 구성표 | BOM 대응 | 03 | gm · 시뮬레이션 | gm 예정 | 제출본 · 검토 대기 | v0.5 | R-01, R-02, R-04~R-07 | [장면 구성표](../scene-inventory/scene-inventory.md) |
 | 4 | D08 | 안전 개념 | Safety Concept | 03 | gm · 시뮬레이션 | gm 예정 | 초안 · 검토 대기 | v0.3 | R-02, R-04~R-06 | [안전 개념](../safety-concept/safety-concept.md) |
-| 4 | 장면 v0 | MJCF, 스크린샷, 확인 출력 | MuJoCo 장면 | 03 | gm · 시뮬레이션 | gm 예정 | 로컬 장면 실행 확인 · 제출 자료 준비 대기 | 로컬 `clearance` | D07, D08 | [D07 장면 구성표](../scene-inventory/scene-inventory.md) |
+| 4 | 장면 v0 | MJCF, 스크린샷, 확인 출력 | MuJoCo 장면 | 03 | gm · 시뮬레이션 | gm 예정 | XML 재로드 확인 · 검토 대기 | `clearance` | D07, D08 | [XML](../scenes/bedroom-v0.xml) · [스크린샷](../scenes/bedroom-v0.png) · [확인 출력](../scenes/bedroom-v0-check.json) |
 | 5 | D04 | 테스트 시나리오·추적표 | Traceability Matrix | 02 | gm · QA | gm 예정 | 초안 · 검토 대기 | v0.5 | R-01~R-10 / T-01~T-09 | [테스트 계획](../test-plan/test-plan.md) |
 | 5 | D05 | 일정·작업 분해·위험 목록 | Project Plan / Risk Register | 02 | gm · PM | gm 예정 | 초안 · 검토 대기 | v0.4 | D02~D04 | [일정·위험 목록](../schedule-risks/schedule-risks.md) |
 
